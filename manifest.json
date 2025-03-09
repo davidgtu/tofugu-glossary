@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Hiragana Helper",
+  "version": "1.0",
+  "description": "Injects a div into Tofugu's Hiragana page.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://www.tofugu.com/japanese/learn-hiragana/"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.tofugu.com/japanese/learn-hiragana/"],
+      "js": ["tofuguGlossary.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
